@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MoteurRechercheComponent } from './moteur-recherche/moteur-recherche.component';
+import { AfficherImagesComponent } from './afficher-images/afficher-images.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoteurRechercheComponent
+    MoteurRechercheComponent,
+    AfficherImagesComponent
   ],
   imports: [
     BrowserModule
