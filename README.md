@@ -19,3 +19,5 @@ npm i angular-responsive-carousel
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 imports : [IvyCarouselModule]
+
+>> ng serve
