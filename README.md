@@ -1,3 +1,26 @@
+# Installation
+
+npm install bootstrap --save 
+
+npm install jquery --save
+
+=> Ajout dans angular.json
+
+"styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+"scripts": ["node_modules/jquery/dist/jquery.min.js"]
+
+
+npm i angular-responsive-carousel
+
+=> Ajout dans appModule.ts
+
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+
+imports : [IvyCarouselModule]
+
 # AtelierFlickr
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
