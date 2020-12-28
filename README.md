@@ -7,8 +7,7 @@ npm install jquery --save
 => Ajout dans angular.json
 
 "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
 "scripts": ["node_modules/jquery/dist/jquery.min.js"]
 
