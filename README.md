@@ -20,4 +20,4 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 imports : [IvyCarouselModule]
 
->>> ng serve
+> > > ng serve
