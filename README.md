@@ -1,8 +1,8 @@
-# Installation
+### Installation
 
-npm install bootstrap --save 
+# npm install bootstrap --save 
 
-npm install jquery --save
+# npm install jquery --save
 
 => Ajout dans angular.json
 
@@ -12,7 +12,7 @@ npm install jquery --save
 "scripts": ["node_modules/jquery/dist/jquery.min.js"]
 
 
-npm i angular-responsive-carousel
+# npm i angular-responsive-carousel
 
 => Ajout dans appModule.ts
 
