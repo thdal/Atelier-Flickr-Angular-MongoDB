@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ImageService} from '../image.service';
 import {Subscription} from 'rxjs';
+import * as $ from "jquery"
+
 
 @Component({
   selector: 'app-afficher-images',
@@ -24,5 +26,6 @@ export class AfficherImagesComponent implements OnInit {
   }
 
   ngOnInit(): void {  }
-
 }
+
+

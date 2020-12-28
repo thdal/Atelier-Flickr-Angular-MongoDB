@@ -30,7 +30,6 @@ export class ImageService {
 
   constructor(private http: HttpClient  ) {  }
 
-
   getImages(keyword: string) {
     this.prevKeyword = keyword;
     const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&';
@@ -38,22 +37,25 @@ export class ImageService {
 
     return this.http.get(url + params).pipe(map((res: FlickrOutput) => {
       const urlArr = [];
+      const imagesObject = [];
+
       res.photos.photo.forEach((ph: FlickrPhoto) => {
         const photoObj = {
           url: `https://farm${ph.farm}.staticflickr.com/${ph.server}/${ph.id}_${ph.secret}`,
           title: ph.title
         };
         urlArr.push(photoObj);
-      });
-      this.subject.next({ tab: urlArr });
-      return urlArr;
+        });
+      urlArr.forEach(function(item){
+        imagesObject.push({path: item.url + '_m.jpg'})
+      })
+      this.subject.next({ tab: imagesObject });
+      return imagesObject;
     }));
   }
 
   getImagesSubject(): Observable<any> {
     return this.subject.asObservable();
   }
-
-
 
 }

@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MoteurRechercheComponent } from './moteur-recherche/moteur-recherche.component';
 import { AfficherImagesComponent } from './afficher-images/afficher-images.component';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
@@ -12,8 +13,7 @@ import { AfficherImagesComponent } from './afficher-images/afficher-images.compo
     MoteurRechercheComponent,
     AfficherImagesComponent
   ],
-  imports: [
-    BrowserModule, FormsModule, HttpClientModule
+  imports: [ BrowserModule, FormsModule, HttpClientModule,  IvyCarouselModule
   ],
   bootstrap: [AppComponent]
 })
