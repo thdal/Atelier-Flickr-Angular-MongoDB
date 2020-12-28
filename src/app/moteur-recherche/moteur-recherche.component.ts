@@ -1,18 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import {ImageService} from '../image.service';
+
 
 @Component({
   selector: 'app-moteur-recherche',
   templateUrl: './moteur-recherche.component.html',
-  styleUrls: ['./moteur-recherche.component.css']
+  styleUrls: ['./moteur-recherche.component.css'],
 })
 export class MoteurRechercheComponent implements OnInit {
 
-  private ApiKey: string ="";
-  private URL: string = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5e6cf683ffcfca04200286e429c5b2de&tags=&format=rest";
+  images = [];
 
-  constructor() { }
+  p_text: string;
+  p_dateMin: string;
+  p_dateMax: string;
 
-  ngOnInit(): void {
+  constructor(private imageService: ImageService) { }
+
+  ngOnInit() {
   }
+
+  callService(): void{
+    this.p_text.toLocaleLowerCase();
+    if (this.p_text && this.p_text.length > 0) {
+      this.imageService.getImages(this.p_text)
+        .toPromise()
+        .then(res => {
+          this.images = res;
+        });
+    }
+  }
+
+
 
 }

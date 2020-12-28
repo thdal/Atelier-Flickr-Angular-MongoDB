@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ImageService} from '../image.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-afficher-images',
@@ -6,10 +8,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./afficher-images.component.css']
 })
 export class AfficherImagesComponent implements OnInit {
+  images = [];
 
-  constructor() { }
+  subscription: Subscription;
 
-  ngOnInit(): void {
+  constructor(private imageService: ImageService) {
+    this.subscription = this.imageService.getImagesSubject().subscribe(objImgs => {
+      if (objImgs) {
+        this.images = objImgs.tab;
+      } else {
+        // clear messages when empty message received
+        this.images = [];
+      }
+    });
   }
+
+  ngOnInit(): void {  }
 
 }

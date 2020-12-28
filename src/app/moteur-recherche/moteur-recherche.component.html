@@ -1,10 +1,13 @@
-<p>moteur-recherche works!</p>
-
 <label for="search">Rechercher :</label>
-<input type="text" id="search" name="search">
-
+<br>
+<input [(ngModel)]="p_text"   type="search" id="search" name="search">
+<br>
 <label for="date-min">Date minimum d'upload :</label>
-<input type="text" id="date-min" name="date-min">
-
+<br>
+<input [(ngModel)]="p_dateMin" type="text" id="date-min" name="date-min">
+<br>
 <label for="date-max">Date maximum d'upload :</label>
-<input type="text" id="date-max" name="date-max">
+<br>
+<input [ngModel]="p_dateMax" type="text" id="date-max" name="date-max">
+<br>
+<button (click)="callService()">Envoyer au service</button>
