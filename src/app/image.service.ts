@@ -30,10 +30,18 @@ export class ImageService {
 
   constructor(private http: HttpClient  ) {  }
 
-  getImages(keyword: string) {
-    this.prevKeyword = keyword;
+  getImages(p_text: string, p_gallerie: boolean, p_apiKey: string,
+  p_dateMin: number, p_dateMax: number) {
+    console.log("-------->DATEMIN")
+    console.log(p_dateMin)
+    if(p_dateMin){
+      const date_min = `&min_upload_date=${p_dateMin}`
+    }
+    if(p_dateMax){
+      const date_max = `&max_upload_date=${p_dateMax}`
+    }
     const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&';
-    const params = `api_key=74ef634e0fdfca8b9ecc3ad2b69ce8c2&text=${keyword}&format=json&nojsoncallback=1`;
+    const params = `api_key=${p_apiKey}&text=${p_text}&in_gallery=${p_gallerie}&format=json&nojsoncallback=1`;
 
     return this.http.get(url + params).pipe(map((res: FlickrOutput) => {
       const urlArr = [];
