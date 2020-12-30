@@ -1,24 +1,50 @@
+<div>
+<form>
+  
 <label for="date-max">Clé api :</label>
 <br>
-<input [(ngModel)]="p_apiKey"   type="text" id="apiKey" name="apiKey">
+<div class="form-group">
+  <div class="col-3">
+<input class="form-control" [(ngModel)]="p_apiKey"   type="text" id="apiKey" name="apiKey">
+</div>
+</div>
 <br>
 <label for="search">Rechercher :</label>
-<br>
-<input [(ngModel)]="p_text"   type="text" id="search" name="search">
+<div class="form-group">
+  <div class="col-2">
+<input class="form-control" [(ngModel)]="p_text"   type="text" id="search" name="search">
+</div>
+</div>
 <br>
 <label for="date-min">Date minimum d'upload :</label>
 <br>
-<input [(ngModel)]="p_dateMin" type="date" id="date-min" name="date-min">
+<div class="form-group">
+  <div class="col-2">
+<input class="form-control" [(ngModel)]="p_dateMin" type="date" id="date-min" name="date-min">
+</div>
+</div>
 <br>
 <label for="date-max">Date maximum d'upload :</label>
 <br>
-<input [(ngModel)]="p_dateMax" type="date" id="date-max" name="date-max">
+<div class="form-group">
+  <div class="col-2">
+<input class="form-control" [(ngModel)]="p_dateMax" type="date" id="date-max" name="date-max">
+</div>
+</div>
 <br>
 <label for="date-max">Appartient à une galerie :</label>
 <br>
-<select [(ngModel)]="p_gallerie"  name="p_gallerie" >
+<div class="form-row align-items-center">
+  <div class="col-auto my-1">
+  <select class="form-control" [(ngModel)]="p_gallerie"  name="p_gallerie" >
   <option [ngValue]="true">True</option>   // value: "Second"
   <option [ngValue]="false" selected >False</option>
 </select>
+  </div>
+</div>
+</form>
 <br>
-<button (click)="callService()">Envoyer au service</button>
+<div class="buttons">
+    <a (click)="callService()" class="btn effect01">Envoyer</a>
+</div>
+</div>
