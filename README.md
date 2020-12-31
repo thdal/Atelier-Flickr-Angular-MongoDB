@@ -8,7 +8,7 @@ Pour initialiser et télécharger node_modules et ce qu'il contient.
 
 ### npm install jquery --save
 
-On installe les deux framework et on ajoute les chemins dans le fichier de config.
+On installe les deux framework officiels de Bootstrap et Jquery et on ajoute les chemins dans le fichier de config.
 
 => Ajout dans angular.json
 
@@ -21,6 +21,8 @@ On installe les deux framework et on ajoute les chemins dans le fichier de confi
 ### npm i angular-responsive-carousel
 
 On installe une bibliothèque qui facilitera l'affichage des images provenant de l'api flickr dans un carousel simple d'utilisation et ergonomique.
+
+Plus d'infos et doc sur la bibliothèque : https://www.npmjs.com/package/angular-responsive-carousel
 
 => Ajout dans appModule.ts
 
