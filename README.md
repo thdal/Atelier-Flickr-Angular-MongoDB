@@ -20,7 +20,7 @@ On installe les deux framework et on ajoute les chemins dans le fichier de confi
 
 ### npm i angular-responsive-carousel
 
-On installe une bibliothèque pour gérer le carousel et l'affichage des images provenant de l'api flickr.
+On installe une bibliothèque, elle permettra l'affichage des images provenant de l'api flickr dans un carousel simple d'utilisation et ergonomique.
 
 => Ajout dans appModule.ts
 
