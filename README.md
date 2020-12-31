@@ -1,3 +1,8 @@
+# Atelier Flickr
+
+Réaliser un moteur de recherche de photos qui exploite l'API de Yahoo Flickr ( https://wwww.flickr.com/services/api/), HTML/CSS (Bootstrap optionnel) & Angular.
+
+
 # Procédure d'installation
 
 ### npm install
