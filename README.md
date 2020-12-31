@@ -8,7 +8,7 @@ Pour initialiser et télécharger node_modules et ce qu'il contient.
 
 ### npm install jquery --save
 
-On installe les deux framework officiels de Bootstrap et Jquery et on ajoute les chemins dans le fichier de config.
+On installe les deux frameworks officiels de Bootstrap et Jquery et on ajoute les chemins dans le fichier de config.
 
 => Ajout dans angular.json
 
