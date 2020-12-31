@@ -20,6 +20,8 @@ On installe les deux framework et on ajoute les chemins dans le fichier de confi
 
 ### npm i angular-responsive-carousel
 
+On installe une bibliothèque pour gérer le carousel et l'affichage des images provenant de l'api flickr.
+
 => Ajout dans appModule.ts
 
 import {IvyCarouselModule} from 'angular-responsive-carousel';
