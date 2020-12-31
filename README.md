@@ -2,7 +2,7 @@
 
 ### npm install
 
-Pour télécharger node_modules
+Pour télécharger node_moduleset toutes les dépendances nécessaires à la génération de notre projet.
 
 ### npm install bootstrap --save 
 
