@@ -28,8 +28,6 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 
 imports : [IvyCarouselModule]
 
-## _ > ng serve
+### _> ng serve
 
 Alors on peut lancer l'application.
-
->
