@@ -15,7 +15,7 @@ Pour initialiser et télécharger node_modules et ce qu'il contient.
 
 On installe les deux frameworks officiels de Bootstrap et Jquery et on ajoute les chemins dans le fichier de config.
 
-=> Ajout dans angular.json
+=> Ajout dans angular.json (Si les lignes n'y sont pas déjà)
 
 "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -29,7 +29,7 @@ On installe une bibliothèque qui facilitera l'affichage des images provenant de
 
 Plus d'infos et doc sur la bibliothèque : https://www.npmjs.com/package/angular-responsive-carousel
 
-=> Ajout dans appModule.ts
+=> Ajout dans appModule.ts (Si les lignes n'y sont pas déjà)
 
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 
