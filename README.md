@@ -1,7 +1,7 @@
 # Atelier Flickr
 
 Réaliser un moteur de recherche de photos qui exploite l'API de Yahoo Flickr ( https://wwww.flickr.com/services/api/), HTML/CSS (Bootstrap optionnel) & Angular.
-
+![alt text](https://github.com/thdal/AtelierFlickr/blob/master/AtelierFlickr.png)
 
 # Procédure d'installation
 
@@ -13,7 +13,7 @@ Pour initialiser et télécharger node_modules et ce qu'il contient.
 
 ### npm install jquery --save
 
-On installe les deux frameworks officiels de Bootstrap et Jquery et on ajoute les chemins dans le fichier de config.
+On installe les deux frameworks officiels de Bootstrap et Jquery.
 
 => Ajout dans angular.json (Si les lignes n'y sont pas déjà)
 
@@ -25,7 +25,7 @@ On installe les deux frameworks officiels de Bootstrap et Jquery et on ajoute le
 
 ### npm i angular-responsive-carousel
 
-On installe une bibliothèque qui facilitera l'affichage des images provenant de l'api flickr dans un carousel simple d'utilisation et ergonomique.
+Installation de la bibliothèque d'un carousel simple d'utilisation.
 
 Plus d'infos et doc sur la bibliothèque : https://www.npmjs.com/package/angular-responsive-carousel
 
