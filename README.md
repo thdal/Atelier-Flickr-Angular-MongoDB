@@ -59,6 +59,8 @@ Actuellement l'application est paramétrée pour se connecter à une database mo
 
 Pour paramétrer l'accès à votre base de données rendez vous dans le fichier server.js lignes 8,9 et 10. Vous pourrez aussi modifier le fichier cacheFlickrSchema.js ligne 10, le premier paramètre vous permettra de changer le nom de votre collection.
 
+La collection sera créée lors de votre premier insert, vous n'aurez pas à la paramétrer préalablement côté mongoDB.
+
 ### _> node serve.js
 
 Alors on peut lancer le serveur node. 
