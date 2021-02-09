@@ -38,3 +38,31 @@ imports : [IvyCarouselModule]
 ### _> ng serve
 
 Alors on peut lancer l'application.
+
+à noter : L'application est actuellement configuré pour fonctionner avec une base mongoDB, pour se servir uniquement de l'appel à l'API flickr il vous faudra uniquement ouvrir le fichier "moteur-recherche.component.html" décommenter la ligne 48 et commenter la ligne 49.
+
+#Partie Mongo
+
+Il nous faudra d'abord installer les bibliothèques suivantes :
+
+### npm install express — save
+
+### npm install mongoose — save
+
+### npm install body-parser --save
+
+### install --save rxjs@6 rxjs-compat@6
+
+La dernière commande permet de résoudre un problème de compatibilité.
+
+Actuellement l'application est paramètré pour se connecter à une database mongo du nom de "madb" sur le port 27017 en 127.0.0.1 et fera les get et les post sur une collection du nom de "flickrCache". 
+
+Pour paramètrer l'accès à votre base de données rendez vous dans le fichier server.js lignes 8,9 et 10. Vous pourrez aussi modifier le fichier cacheFlickrSchema.js ligne 10, le premier paramètre vous paramètra de changer le nom de votre collection.
+
+### _> node serve.js
+
+Alors on peut lancer le serveur node. 
+
+(Sans oublier d'avoir lancer votre service mongoDB dans un terminal avec la commande mongod ainsi que votre appli angular avec la commande ng serve).
+
+

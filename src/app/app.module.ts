@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MoteurRechercheComponent } from './moteur-recherche/moteur-recherche.component';
 import { AfficherImagesComponent } from './afficher-images/afficher-images.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {ImageService} from "./image.service";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
   ],
   imports: [ BrowserModule, FormsModule, HttpClientModule,  IvyCarouselModule
   ],
+  providers: [ImageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

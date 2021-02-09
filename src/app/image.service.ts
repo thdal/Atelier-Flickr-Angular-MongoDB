@@ -1,7 +1,9 @@
 import { Inject, Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import {HttpClient, HttpParams, HttpResponse} from '@angular/common/http';
 import {catchError, map} from 'rxjs/operators';
 import {Observable, Subject} from 'rxjs';
+
+import 'rxjs/add/operator/map';
 
 
 export interface FlickrPhoto {
@@ -28,10 +30,10 @@ export class ImageService {
   currPage = 1;
 
 
-  constructor(private http: HttpClient  ) {  }
+  constructor(private http: HttpClient) {  }
 
   getImages(p_text: string, p_gallerie: boolean, p_apiKey: string,
-  p_dateMin: number, p_dateMax: number) {
+            p_dateMin: number, p_dateMax: number) {
     const url = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&';
     var params = `api_key=${p_apiKey}&text=${p_text}&in_gallery=${p_gallerie}`;
     if(p_dateMin){
@@ -55,7 +57,7 @@ export class ImageService {
           title: ph.title
         };
         urlArr.push(photoObj);
-        });
+      });
       urlArr.forEach(function(item){
         imagesObject.push({path: item.url + '_m.jpg'})
       })
@@ -64,8 +66,29 @@ export class ImageService {
     }));
   }
 
+  updateTabImgs(imgs) {
+    this.subject.next({ tab: imgs });
+  }
+
   getImagesSubject(): Observable<any> {
     return this.subject.asObservable();
+  }
+
+  postCacheFlickr(obj, name) {
+    var objPost = {
+      mode: "Save",
+      imgs: obj,
+      name: name
+    }
+    return this.http.post('http://localhost:8080/api/postCacheFlickr/', objPost)
+      .map((response: Response) => response.json())
+  }
+
+  getCacheFlickr(name){
+    let param = new HttpParams().set('name', name);
+    return this.http.get('http://localhost:8080/api/getCacheFlickr/',{
+      params: param
+    }).map((response: HttpResponse<any>) => response)
   }
 
 }
