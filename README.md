@@ -41,7 +41,7 @@ Alors on peut lancer l'application.
 
 à noter : L'application est actuellement configuré pour fonctionner avec une base mongoDB, pour se servir uniquement de l'appel à l'API flickr il vous faudra uniquement ouvrir le fichier "moteur-recherche.component.html" décommenter la ligne 48 et commenter la ligne 49.
 
-# Partie Mongo
+# Partie MongoDB
 
 Il nous faudra d'abord installer les bibliothèques suivantes :
 
