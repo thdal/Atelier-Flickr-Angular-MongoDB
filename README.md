@@ -5,6 +5,8 @@ Réaliser un moteur de recherche de photos qui exploite l'API de Yahoo Flickr ( 
 
 # Procédure d'installation
 
+# Partie 1 API FLICKR
+
 ### npm install
 
 Pour initialiser et télécharger node_modules et ce qu'il contient.
@@ -41,7 +43,7 @@ Alors on peut lancer l'application.
 
 A noter : L'application est actuellement configurée pour fonctionner avec une base mongoDB, pour se servir uniquement de l'appel à l'API flickr il vous faudra uniquement ouvrir le fichier "moteur-recherche.component.html" décommenter la ligne 48 et commenter la ligne 49.
 
-# Partie MongoDB
+# Partie 2 MongoDB
 
 Il nous faudra d'abord installer les bibliothèques suivantes :
 
@@ -65,6 +67,6 @@ La collection sera créée lors de votre premier insert, vous n'aurez pas à la 
 
 Alors on peut lancer le serveur node. 
 
-(Sans oublier d'avoir lancé votre service mongoDB dans un terminal avec la commande mongod ainsi que votre appli angular avec la commande ng serve).
+(Sans oublier d'avoir lancé votre service mongoDB dans un terminal avec la commande mongod ainsi que votre appli angular avec la commande ng serve, en ayant bien suivi la procèdure d'installation de la partie 1).
 
 
