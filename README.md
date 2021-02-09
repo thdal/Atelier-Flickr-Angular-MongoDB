@@ -41,7 +41,7 @@ imports : [IvyCarouselModule]
 
 Alors on peut lancer l'application.
 
-A noter : L'application est actuellement configurée pour fonctionner avec une base mongoDB, pour se servir uniquement de l'appel à l'API flickr il vous faudra uniquement ouvrir le fichier "moteur-recherche.component.html" décommenter la ligne 48 et commenter la ligne 49.
+_A noter : L'application est actuellement configurée pour fonctionner avec une base mongoDB, pour se servir uniquement de l'appel à l'API flickr il vous faudra uniquement ouvrir le fichier "moteur-recherche.component.html" décommenter la ligne 48 et commenter la ligne 49._
 
 # Partie 2 MongoDB
 
@@ -59,7 +59,7 @@ La dernière commande permet de résoudre un problème de compatibilité.
 
 Actuellement l'application est paramétrée pour se connecter à une database mongo du nom de "madb" sur le port 27017 en 127.0.0.1 et fera les get et les post sur une collection du nom de "flickrCache". 
 
-Pour paramétrer l'accès à votre base de données rendez vous dans le fichier server.js lignes 8,9 et 10. Vous pourrez aussi modifier le fichier cacheFlickrSchema.js ligne 10, le premier paramètre vous permettra de changer le nom de votre collection.
+Pour paramétrer l'accès à votre base de données rendez vous dans le fichier **server.js** lignes 8,9 et 10. Vous pourrez aussi modifier le fichier **cacheFlickrSchema**.js ligne 10, le premier paramètre vous permettra de changer le nom de votre collection.
 
 La collection sera créée lors de votre premier insert, vous n'aurez pas à la paramétrer préalablement côté mongoDB.
 
@@ -67,6 +67,6 @@ La collection sera créée lors de votre premier insert, vous n'aurez pas à la 
 
 Alors on peut lancer le serveur node. 
 
-(Sans oublier d'avoir lancé votre service mongoDB dans un terminal avec la commande mongod ainsi que votre appli angular avec la commande ng serve, en ayant bien suivi la procèdure d'installation de la partie 1).
+(Sans oublier d'avoir lancé votre service mongoDB dans un terminal avec la commande mongod ainsi que votre appli angular avec la commande ng serve, en ayant bien suivi **la procèdure d'installation** de la **partie 1**).
 
 
