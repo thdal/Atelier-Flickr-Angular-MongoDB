@@ -80,13 +80,13 @@ export class ImageService {
       imgs: obj,
       name: name
     }
-    return this.http.post('http://localhost:8080/api/postCacheFlickr/', objPost)
+    return this.http.post('http://localhost:8080/api/post/cacheFlickr/', objPost)
       .map((response: Response) => response.json())
   }
 
   getCacheFlickr(name){
     let param = new HttpParams().set('name', name);
-    return this.http.get('http://localhost:8080/api/getCacheFlickr/',{
+    return this.http.get('http://localhost:8080/api/get/cacheFlickr/',{
       params: param
     }).map((response: HttpResponse<any>) => response)
   }

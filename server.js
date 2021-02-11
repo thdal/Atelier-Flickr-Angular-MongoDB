@@ -37,7 +37,7 @@ app.use(function (req, res, next){
  * Méthode get ici on récupére notre objet dans la base mongoDB *
  ****************************************************************/
 
-app.get("/api/getCacheFlickr",function (req, res){
+app.get("/api/get/cacheFlickr",function (req, res){
   // Ici on récupère le paramètre de recherche provenant de l'app angular
   // cela nous servira à regarder en base si on a des données en cache.
   var name = req.query.name
@@ -56,7 +56,7 @@ app.get("/api/getCacheFlickr",function (req, res){
  * Méthode post ici on fait les insert/update dans notre base mongoDB  *
  ***********************************************************************/
 
-app.post("/api/postCacheFlickr", function (req, res){
+app.post("/api/post/cacheFlickr", function (req, res){
   // On init un schema avec nos valeurs
   var newFlickr = new flickr({
     name: req.body.name,
