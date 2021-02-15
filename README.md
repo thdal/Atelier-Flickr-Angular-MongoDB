@@ -41,7 +41,7 @@ imports : [IvyCarouselModule]
 
 Alors on peut lancer l'application.
 
-_A noter : L'application est actuellement configurée pour fonctionner avec une base mongoDB, pour se servir uniquement de l'appel à l'API flickr il vous faudra ouvrir le fichier "moteur-recherche.component.html" décommenter la ligne 48 et commenter la ligne 49._
+_A noter : L'application est actuellement configurée pour fonctionner avec une base mongoDB, pour se servir uniquement de l'appel à l'API flickr il vous faudra ouvrir le fichier "moteur-recherche.component.html" décommenter la ligne 48 et commenter la ligne 49 afin de faire appel à la méthode correspondante au moment du clique sur le bouton de recherche._
 
 # Partie 2 MongoDB
 

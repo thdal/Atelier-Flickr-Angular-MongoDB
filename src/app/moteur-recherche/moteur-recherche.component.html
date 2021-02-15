@@ -37,15 +37,15 @@
 <div class="form-row align-items-center">
   <div class="col-auto my-1">
   <select class="form-control" [(ngModel)]="p_gallerie"  name="p_gallerie" >
-  <option [ngValue]="true">True</option>   // value: "Second"
-  <option [ngValue]="false" selected >False</option>
+  <option [ngValue]="true">Oui</option>   // value: "Second"
+  <option [ngValue]="false" selected >Non</option>
 </select>
   </div>
 </div>
 </form>
 <br>
 <div class="buttons">
-  <!--<a (click)="callApiFlickr()" class="btn effect01">Envoyer</a>-->
-   <a (click)="checkCacheInMongo()" class="btn effect01">Envoyer</a>
+  <!--<a (click)="callApiFlickr()" class="btn effect01">Rechercher</a>-->
+   <a (click)="checkCacheInMongo()" class="btn effect01">Rechercher</a>
 </div>
 </div>
